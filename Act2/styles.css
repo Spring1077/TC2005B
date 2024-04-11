@@ -1,4 +1,28 @@
-#barra-navegacion {
+.barra-navegacion{
+    display: flex;
+    justify-content: center;
+}
+
+.barra-navegacion ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.barra-navegacion ul li{
+    /*display: inline-block*/
     display: flex;
     flex-direction: column-reverse;
 }
+
+
+.barra-navegacion li a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.3 ease;
+}
+
+.barra-navegacion li a:hover{
+    color:blue;
+}
+
