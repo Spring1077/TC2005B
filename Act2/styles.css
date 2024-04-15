@@ -10,9 +10,8 @@
 }
 
 .barra-navegacion ul li{
-    /*display: inline-block*/
-    display: flex;
-    flex-direction: column-reverse;
+    display: inline-block;
+    
 }
 
 
