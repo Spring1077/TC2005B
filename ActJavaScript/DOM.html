@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Añadir Párrafo y Cambiar Color de Fondo</title>
+<style>
+    /* Estilo inicial del párrafo */
+    #parrafo {
+        background-color: lightgray;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+    }
+</style>
+</head>
+<body>
+
+<h1>Añadir Párrafo y Cambiar Color de Fondo</h1>
+
+<label for="texto">Introduce el texto para el nuevo párrafo:</label>
+<input type="text" id="texto">
+<button onclick="agregarParrafo()">Agregar Párrafo</button>
+
+<div id="contenedor"></div>
+
+<script>
+function agregarParrafo() {
+    // Obtener el texto del usuario
+    var textoUsuario = document.getElementById("texto").value;
+
+    // Crear un nuevo elemento párrafo
+    var nuevoParrafo = document.createElement("p");
+
+    // Asignar el texto del usuario al nuevo párrafo
+    nuevoParrafo.textContent = textoUsuario;
+
+    // Obtener el contenedor donde se agregarán los párrafos
+    var contenedor = document.getElementById("contenedor");
+
+    // Agregar el nuevo párrafo al contenedor
+    contenedor.appendChild(nuevoParrafo);
+
+    // Asignar eventos al nuevo párrafo
+    nuevoParrafo.addEventListener("mouseover", function() {
+        this.style.backgroundColor = "lightblue";
+    });
+
+    nuevoParrafo.addEventListener("mouseout", function() {
+        this.style.backgroundColor = "lightgray";
+    });
+}
+</script>
+
+</body>
+</html>
